@@ -14,10 +14,20 @@ namespace OmegaOS
 
         protected override void Run()
         {
-            Console.Write("Input: ");
+            Console.Write("Omega> ");
             var input = Console.ReadLine();
-            Console.Write("Text typed: ");
-            Console.WriteLine(input);
+            switch (input)
+            {
+                case "about":
+                    Console.WriteLine("OmegaOS v1.0.0");
+                    Run();
+                    break;
+                case "root":
+                    Console.Write("Password: ");
+                    Console.ReadLine();
+                    Run();
+                    break;
+            }
         }
     }
 }
